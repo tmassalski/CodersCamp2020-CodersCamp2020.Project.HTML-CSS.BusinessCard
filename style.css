@@ -34,16 +34,6 @@ p{
     font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
 .nav { 
     background: white;
     height: 5rem; 
@@ -129,7 +119,6 @@ p{
 
 /* Buttons section */
 
-
 .btn {
     box-sizing: border-box;
     width: 200px;
@@ -153,7 +142,6 @@ p{
 .btn:focus {
     outline: none;
 }
-
 
 /* Header section */
 
@@ -213,7 +201,6 @@ p{
     100%{
         opacity: 100;
     }
-
 }
 
 .contact{
