@@ -8,7 +8,6 @@ html {
   }
 
 body{
-    
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
@@ -47,6 +46,7 @@ p{
     text-align: right;
     list-style: none;
     margin: 0 auto;
+    padding:0%;
   }
 
 .nav ul li {
@@ -217,7 +217,6 @@ p{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-
 }
 
 /* About me section */
@@ -460,17 +459,76 @@ form .row{
 }
 
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 1024px){
+.header h1{
+        font-size: 6rem;
+    }
+    .header p{
+        font-size: 4rem;
+    }
 
+    .contact{
+        width: 95%;
+    }
+
+    #about_me_background{
+        max-width: 100%;
+     }
+
+    #skills_background{
+        width: 100%;
+     }
+
+     #skills .skill {
+        background-color: #FF9800;
+        font-size: 6rem;
+        color: #fff;
+        height: 130px;
+        width: 130px;
+    }
+    #skills i {
+        line-height: 130px;
+    }
+    .project{
+        width: 300px;
+        height: 200px;
+    }
 }
 
+@media only screen and (max-width: 768px){
 
+    .nav{
+        display: inline;
+        font-size: 1.5rem;
+        line-height: 2rem;  
+    }
+
+    .header h1{
+        font-size: 5rem;
+    }
+    .header p{
+        font-size: 3rem;
+    }
+
+    .about_me{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .description{ 
+        width: 95%;
+    } 
+}
 
 @media only screen and (max-width: 450px){
     
     .nav{
         display: inline;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        line-height: 2rem;  
+    }
+    .nav a {
+        margin: 0 0.5rem;
     }
 
     #scroll{
@@ -490,10 +548,7 @@ form .row{
     .header p{
         font-size: 1.8rem;
     }
-    .contact{
-        width: 95%;
 
-    }
     .contact .buttons{
         flex-direction: column;
         align-items: center;
@@ -505,26 +560,6 @@ form .row{
     .btn{
         font-size: 1rem;
     }
-    .about_me{
-        flex-direction: column;
-    }
-     .description{ 
-         width: 95%;
-     }
-     #skills_background{
-         max-width: 100%;
-     }
-
-     #skills .skill {
-        background-color: #FF9800;
-        font-size: 6rem;
-        color: #fff;
-        height: 130px;
-        width: 130px;
-    }
-    #skills i {
-        line-height: 130px;
-    }
     #portfolio_background{
         max-width: 100%;
     }
@@ -532,11 +567,18 @@ form .row{
         width: 100%;
         height: 250px;
     }
+    #contact_me{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    #contact{
+        width: 100%;
+    }
+
     #form_background{
         width: 100%;
     }
     .form{
         width: 100%;
     }
-} 
-
+}
