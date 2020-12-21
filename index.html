@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>CodersCamp | Projekt 1 - HTML i CSS</title>
     <meta name="description" content="CodersCamp to darmowy, otwarty kurs programowania webowego we Wrocławiu. Sprawdź, czego nauczysz się na CodersCamp i spróbuj swoich sił w branży IT!">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -128,48 +127,47 @@
         </div>
     </div>
 
-    <div id="form_background">
+    <div id="contact_form_background">
         <h2>Contact me</h2>
 
         <div id="contact_me">
+            <div id = "contact">
+
+                <div id="info">
+                    <p>
+                        Please describe your question. Send me a message and I will answer you as soon as possible!
+                    </p>
+                </div>
+
+                <div class="address">
+                    <p>Not much of a Designer</p>
+                    <p>Poland, Warsaw</p>
+                    <p>ul. Al. Jana Pawła II 19</p>
+                    <p>03-011 Warszawa </p>
+                    <p>+48 111 222 333</p>
+                    <p><a href = "mailto: test.test@gmail.com">test.test@gmail.com</a></p>
+                </div>
+            </div>
         
-        <div id = "contact">
+            <div class="form">
+                <div class="form_header">
+                    <h3>Let's start!</h3>
+                </div>
 
-            <div id="info">
-                <p>
-                    Please describe your question. Send me a message and I will answer you as soon as possible!
-                </p>
+                <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+                        <label><input type="text" name="name" class="row" placeholder="Name"></label>
+                        <label><input type="email" name="email" class="row" placeholder="Your e-mail address"></label>
+                        <label><input type="text" name="subject" class="row" placeholder="Subject"></label>
+                        <label><input type="text" name="message" class="row message" placeholder="Message"></label>
+                        <button type="button" class="btn">Send</button>
+                </form>
             </div>
-
-            <div class="address">
-                <p>Designer</p>
-                <p>Poland, Warsaw</p>
-                <p>ul. Al. Jana Pawła II 19</p>
-                <p>03-011 Warszawa </p>
-                <p>+48 111 222 333</p>
-                <p><a href = "mailto: test.test@gmail.com">test.test@gmail.com</a></p>
-            </div>
-        </div>
-    
-        <div class="form">
-            <div class="form_header">
-                <h3>Let's start!</h3>
-            </div>
-
-            <form action="" method="POST" enctype="application/x-www-form-urlencoded">
-                    <label><input type="text" name="name" class="row" placeholder="Name"></label>
-                    <label><input type="email" name="email" class="row" placeholder="Your e-mail address"></label>
-                    <label><input type="text" name="subject" class="row" placeholder="Subject"></label>
-                    <label><input type="text" name="message" class="row message" placeholder="Message"></label>
-                    <button type="button" class="btn">Send</button>
-            </form>
         </div>
     </div>
-</div>
 
     <div class="footer">
         <div class="container">
-        <p>Copyright &copy; 2020 CodersCrew</p>
+        <p>Copyright &copy; 2020 me</p>
         </div>
     </div>
 </body>
