@@ -1,35 +1,32 @@
 html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body{
+    
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2{
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 p{
-    font-size: 1.3em;
-}
-
-.nav{
-    font-size: 1.7em;
-    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .btn{
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-weight: 300;
-}
-
-.details .value{
-    color: orange;
-}
-.details p{
-    font-weight: 900;
 }
 
 .form .form_header{
@@ -37,41 +34,51 @@ p{
     font-weight: bold;
 }
 
+
+
+
+
+
+
+
+
+
+
 .nav { 
     background: white;
-    height: 80px; 
+    height: 5rem; 
     width: 100%;
     text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 .nav ul {
     text-align: right;
-    height: 80px;
     list-style: none;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
 .nav ul li {
     display: inline-flex; 
-    height: 80px;
-    line-height: 80px; 
-    list-style: none;
-    padding: 0 5px;
+    line-height: 5rem;  
 }
   
-a {
+.nav a {
     color: rgb(100,100,100);
-	position: relative;
-	padding: 0.5rem 0 0.5rem;
-    margin: 0 1.5rem;
+    position: relative;
+    text-align: center;
+    margin: 0 1rem;
+    box-sizing: border-box;
     text-decoration: none;
     transition: transform 0.4s;
 }
-a:hover{
-    color: orange;
-}
 
-a::after {
+ .nav a:hover{
+    color: #FF9800;
+} 
+
+.nav a::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -80,46 +87,67 @@ a::after {
     transform-origin: 50% 50%;
     width: 110%;
     height: 3px;
-    background-color: orange;
+    background-color: #FF9800;
     transition: transform 0.4s;
 }
 
-a:hover::after{
+.nav a:hover::after{
     transform: translateX(-50%) scaleX(1);
+} 
+
+#scroll{
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #FF9800;
+    outline: none;
+    background-color: transparent;
+    color: #FF9800;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
 }
+#scroll:hover{
+    background-color: #FF9800;
+    color: white;
+}
+
+/* Contact */
 
 .contact{
     text-align: center;
     padding: 3%;
-    /* height: 20vh; */
 }
+
+/* Buttons section */
+
 
 .btn {
     box-sizing: border-box;
     width: 200px;
-    margin: 10px 20px;
-
-    color: #fff;
-    cursor: pointer;
     height: 55px;
-    text-align:center;
-    border: none;
-    background-size: 150% 100%;
-    background-image: linear-gradient(to right, #e85a19, #f5ce62);
+    margin-top: 10px;
     border-radius: 15px;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    border: 1px solid orange;
+    background: white;
+    color: #FF9800;
+    cursor: pointer;
+    text-align:center;
+    transition: all .3s ease-in-out;
   }
 
 .btn:hover {
-    border: 1px solid orange;
-    background: white;
-    color: orange;
-    background-image: none;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(to right, #FF9800, #f5ce62);
 }
 
 .btn:focus {
@@ -127,42 +155,98 @@ a:hover::after{
 }
 
 
+/* Header section */
 
 .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 5rem);
     padding: 30px;
     background-color: gray;
-    background: gray url(/img/road.jpg) no-repeat center/ cover ;
+    background: gray url(img/road.jpg) no-repeat center/ cover ;
     box-sizing: border-box;
+    animation: header 1s 2s forwards;
+    opacity: 0.5;
+}
+
+@keyframes header{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .header h1{
-    color: orange;
-    font-size: 10vh;
+    color: #FF9800;
+    font-size: 8rem;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: h1_animation 3s 1s forwards;
 }
+
+@keyframes h1_animation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
 .header p{
     color: white;
-    font-size: 5vh;
+    font-size: 5rem;
+    max-width: 90%;
+    opacity: 0;
+    animation: p_animation 4s 4s forwards;
+}
+
+@keyframes p_animation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+
 }
 
 .contact{
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.contact p {
+    font-size: 2rem;
+}
+
+.contact .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/* About me section */
 
 #about_me_background{
     height: auto;
     background-color: rgb(240, 240, 240);
     padding: 3%;
     display: flex; 
-    flex-direction: column;
-    
+    flex-direction: column; 
+    align-self: flex-start; 
+    max-width: 90%;
 }
 
 .about_me{
-    padding: 3%;
+    padding: 2%;
     background-color: rgb(255,255,255);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     display: flex;
@@ -170,22 +254,32 @@ a:hover::after{
     align-items: center; 
 }
 
-.photo{
-    margin: 2rem;
+.details .value{
+    color: #FF9800;
 }
+.details p{
+    font-weight: 900;
+}
+
+.photo{
+    margin: 1.5%;
+}
+
 .about_me img{
     width: 180px;
     border-radius: 50%;
 }
+
+.about_me .details{
+    margin: 1.5%;
+}
+
 .description{
-    margin: 2rem;
+    margin: 1.5%;
     width: 60%;
 }
 
-.about_me .details{
-    margin: 2rem;
-
-}
+/* Skills section */
 
 #skills_background{
     height: auto;
@@ -193,7 +287,8 @@ a:hover::after{
     padding: 3%;
     display: flex; 
     flex-direction: column;
-    max-width: 80%;
+    width: 90%;
+    align-self: flex-end;
 }
 
 #skills{
@@ -203,17 +298,17 @@ a:hover::after{
     justify-content: center;
 }
 
-#skills .skill {
-    background-color: orange;
-    font-size: 10em;
+.skill {
+    background-color: #FF9800;
+    font-size: 10rem;
     text-align: center;
     color: #fff;
     height: 200px;
     width: 200px;
     box-sizing: border-box;
     border: 20px;
-    line-height: 200px;
     margin: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 #skills i {
@@ -225,15 +320,17 @@ a:hover::after{
     font-size: 1.15em; 
 }
 
+/* Portfolio section */
+
 #portfolio_background{
     height: auto;
     background-color: rgb(240, 240, 240);
     padding: 3%;
     display: flex; 
     flex-direction: column;
-    max-width: 80%;
-
+    max-width: 100%;
 }
+
 #portfolio{
     display: flex;
     flex-wrap: wrap;
@@ -242,15 +339,13 @@ a:hover::after{
 }
 
 .project{
-    
     width: 500px;
-    height: 300px;
+    height: 250px;
 	text-align: center;
-    /* border: 2px solid blue; */
     background-color: black;
     overflow: hidden;
     position: relative;
-    
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .project img{
@@ -265,13 +360,14 @@ a:hover::after{
 	display: block;
 	width: 100%;
     height: 100%;
+    padding: 5%;
     color: #fff;
     background-color: #000;
     text-align: center;
 	left: 0px;
 	top: 0px;
 	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .project:hover .project_description
@@ -295,17 +391,36 @@ a:hover::after{
 }
 
 #form_background{
-    height: 100vh;
+    width: 100%;
     background-color: rgb(240, 240, 240);
     padding: 3%;
 }
 
+#contact_me{
+    display: flex;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    max-width: 95%;
+}
+
+#contact{
+    background-color: #FF9800;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 50%;
+    padding: 3%;
+    color: #fff;
+}
+#contact .address{
+    line-height: 1rem;
+}
+
 .form{
     padding: 3%;
-    height: 80vh;
     width: 50%;
     background-color: rgb(255,255,255);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -342,22 +457,99 @@ form .row{
     align-self: flex-end;
 }
 
-
-
-
-
-
 .footer { 
     background: white;
-    height: 80px; 
-    padding-bottom: 50px;
+    height: 2rem; 
+    padding-bottom: 1%;
   }
   
 .footer p { 
     color: gray;
     text-align: center;
-    font-size: 0.75em;  
-    height: 80px; 
-    line-height: 80px;
+    font-size: 0.75rem;  
+    height: 2rem; 
+    line-height: 2rem;
     margin: 0;  
 }
+
+
+@media only screen and (max-width: 450px){
+
+}
+
+
+
+@media only screen and (max-width: 450px){
+    
+    .nav{
+        display: inline;
+        font-size: 1rem;
+    }
+
+    #scroll{
+        bottom: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+        border-radius: 10px;
+    }
+
+    .header h1{
+        font-size: 2.5rem;
+    }
+    .header p{
+        font-size: 1.8rem;
+    }
+    .contact{
+        width: 95%;
+
+    }
+    .contact .buttons{
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .contact p{
+        font-size: 1.5rem;
+    }
+    .btn{
+        font-size: 1rem;
+    }
+    .about_me{
+        flex-direction: column;
+    }
+     .description{ 
+         width: 95%;
+     }
+     #skills_background{
+         max-width: 100%;
+     }
+
+     #skills .skill {
+        background-color: #FF9800;
+        font-size: 6rem;
+        color: #fff;
+        height: 130px;
+        width: 130px;
+    }
+    #skills i {
+        line-height: 130px;
+    }
+    #portfolio_background{
+        max-width: 100%;
+    }
+    .project{
+        width: 100%;
+        height: 250px;
+    }
+    #form_background{
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+} 
+
