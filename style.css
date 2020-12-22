@@ -226,9 +226,8 @@ p{
     background-color: rgb(240, 240, 240);
     padding: 3%;
     display: flex; 
-    flex-direction: column; 
-    align-self: flex-start; 
-    max-width: 90%;
+    flex-direction: column;
+    width: 100%;
 }
 
 .about_me{
@@ -237,7 +236,13 @@ p{
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    max-width: 1600px;
+    align-self: center;
+}
+
+.about_me .details{
+    min-width: 295px;
 }
 
 .details .value{
@@ -262,7 +267,7 @@ p{
 
 .description{
     margin: 1.5%;
-    width: 60%;
+    /* width: 50%; */
 }
 
 /* Skills section */
@@ -273,8 +278,7 @@ p{
     padding: 3%;
     display: flex; 
     flex-direction: column;
-    width: 90%;
-    align-self: flex-end;
+    width: 100%;
 }
 
 #skills{
@@ -314,7 +318,7 @@ p{
     padding: 3%;
     display: flex; 
     flex-direction: column;
-    max-width: 100%;
+
 }
 
 #portfolio{
@@ -325,7 +329,7 @@ p{
 }
 
 .project{
-    width: 500px;
+    width: 450px;
     height: 250px;
 	text-align: center;
     background-color: black;
@@ -377,6 +381,8 @@ p{
 }
 
 #contact_form_background{
+    display: flex;
+    flex-direction: column; 
     width: 100%;
     background-color: rgb(240, 240, 240);
     padding: 3%;
@@ -384,8 +390,9 @@ p{
 
 #contact_me{
     display: flex;
+    max-width: 1600px;
+    align-self: center;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    max-width: 95%;
 }
 
 #contact{
@@ -406,7 +413,6 @@ p{
     padding: 3%;
     width: 50%;
     background-color: rgb(255,255,255);
-    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -471,14 +477,6 @@ form .row{
         width: 95%;
     }
 
-    #about_me_background{
-        max-width: 100%;
-     }
-
-    #skills_background{
-        width: 100%;
-     }
-
      #skills .skill {
         background-color: #FF9800;
         font-size: 6rem;
@@ -515,7 +513,7 @@ form .row{
     }
 
     .description{ 
-        width: 95%;
+        width: 100%;
     } 
 }
 
@@ -605,7 +603,6 @@ form .row{
     }
     #contact_me{
         flex-direction: column;
-        max-width: 100%;
     }
     #contact{
         width: 100%;
